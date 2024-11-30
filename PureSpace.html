@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drinks4U</title>
+  <meta name="description" content="Drinks4U - Your one-stop shop for all your drink needs">
+<meta name="keywords" content="drinks, shop, milkshake, chocolate, cocktails">
+<meta name="author" content="Sami Chabouni">
+<link rel="stylesheet" href="Drinks4U.js">
+
+  <link rel="stylesheet" href="PureSpace.css">
+</head>
+<body>
+  <nav class="nav">
+      <a href="PureSpace.html" class="logo">Drinks4U</a></h2>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="Drinks.html">Drinks</a>
+      <a href="About.html">About</a>
+    <a href="Contact.html">Join Us</a>
+    </ul>
+  </nav>
+  <section class="drinks">
+    <div class="circle"></div>
+  <div class="content">
+ <div class="textBox"> <h1>Drinks4U</h1><h2>All the drinks in your<span> Dreams</span></h2>
+  <p>Drinks4u,your one stop shop for all your drinks needs</p>
+ <a href="Drinks.html">Explore drinks</a></div>
+  </div>
+  <div class="imgBox">
+    <img src="./file (4).png"  class="imginitial">
+    
+  </div>
+<ul class="thumb">
+  <li><img src="./file (6).png" onclick="imgSlider('./file (6).png');changeCircleColor('#3D9970')"></li>
+    <li><img src="./file (5).png" onclick="imgSlider('./file (5).png');changeCircleColor('#C88818')"></li>
+    <li><img src="./freepik__a-chocolate-milkshake-with-whipped-cream-and-choco__82392.png" onclick="imgSlider('./freepik__a-chocolate-milkshake-with-whipped-cream-and-choco__82392.png');changeCircleColor('#7B3F00')"></li>
+</ul>
+</section>
+<script>
+  
+  function imgSlider(anything){
+    document.querySelector('.imginitial').src = anything;
+    
+  }
+  function readMore() {
+    const text = document.querySelector('.notshow'); // Get the .notshow element
+    const button = document.getElementsByClassName('btn')[0]; // Get the first button with class 'btn'
+
+    // Check the current display style using computed style, not directly on text.style
+    const currentDisplay = window.getComputedStyle(text).display;
+
+    if (currentDisplay === "none") {
+      text.style.display = "block";  // Show the text
+      button.innerHTML = 'Read Less'; // Change button text to 'Read Less'
+    } else {
+      text.style.display = "none";   // Hide the text
+      button.innerHTML = 'Read More'; // Change button text to 'Read More'
+    }
+  }
+
+
+
+  function changeCircleColor(color){
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+  }
+</script>
+    <div class="Story">
+      <h1>Our Story</h1>
+      <p>In 2018, a dream was born — a dream to create the ultimate destination for drink lovers. Founded by <strong>Sami Chabouni</strong>, Drinks4U started with a simple yet powerful goal: to transform every drink into a moment of joy, delight, and connection. What began as a small venture has now blossomed into a beloved brand trusted by customers around the world for premium drinks that elevate everyday experiences.</p>
+      
+      <p>From the very first sip of our freshly blended juices to the indulgent experience of our milkshakes and refreshing soft drinks, every product we offer is crafted with passion, creativity, and an unwavering commitment to quality. Our team handpicks the finest ingredients, ensuring that every drink we deliver is bursting with flavor, freshness, and fun. We believe that the best drinks are not just about taste—they’re about making you feel something special with every sip.</p>
+  <div class="notshow">
+      <p>But our story doesn’t end with just creating great drinks. It's about creating lasting memories. It's about turning every moment into an opportunity to share joy with friends, family, and loved ones. Whether it's a lazy afternoon milkshake, a celebratory cocktail, or a refreshingly healthy smoothie, Drinks4U is here to bring people together, one sip at a time.</p>
+  
+      <p>As we continue to grow, our mission remains simple yet profound: to make every drink experience as extraordinary as the people who enjoy them. Thank you for being a part of our story. Here's to more drinks, more moments, and more memories—together.</p>
+  </div>
+      <a href="About.html">Join Our Journey</a>
+    
+ 
+  <button class="btn" onclick="readMore()" >Read more</button> 
+
+    </div>
+
+            
+
+</body>
+</html>

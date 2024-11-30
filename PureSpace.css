@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #002D62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+z-index: 100;
+}
+.logo{
+ font-size: large;
+ color: #fff;
+ text-decoration: none;
+ font-weight: 700;
+}
+.nav a{
+    position: relative;
+font-size: 18px;
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+margin-left: 40px;
+}
+.nav a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition:  .3s;
+}
+.nav a:hover::before{
+    width: 100%;
+    
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #94bed3;
+}
+.content{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.content .textBox{
+    position: relative;
+ 
+}
+.content .textBox h2{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.content .textBox h2 span{
+    background:linear-gradient(80deg,#8c00ff,#dd00ff,#25aac4 ,#1967a3 );
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: #c6cfd9;
+font-size: 1.2em;
+font-weight: 900;
+}
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 10px;
+    background: #275489;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+}
+.content .imgBox{ 
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.imgBox{
+    position: relative;
+    z-index: 1;
+    width: 500px;
+}
+.imgBox img{
+    max-width: 340px;
+    z-index: 1;
+}
+.thumb{
+position:absolute;
+left: 50%;
+bottom: 40px;
+transform: translateX(-50%);
+display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb li img{
+    max-width: 40px;
+}
+.circle{ position: absolute;
+   transition: background 0.5s ease-out;
+top: 0;
+left: 0;
+width:100% ;
+height: 100%;
+background: #2e6394;
+clip-path: circle(600px at right 800px);
+
+}
+.notshow{
+    display: none;
+}
+.Story{
+    background: linear-gradient(45deg, #2e6394, #1c4a72);
+    padding: 50px;
+    transition: background 1s ease-in-out;
+}
+.Story h1{
+    color: #e6e6e6;
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: 500;
+}
